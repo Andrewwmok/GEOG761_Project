@@ -28,3 +28,21 @@ Location source: article caption
 GPS metadata: No
 Creator: CPL Robert Whitmore
 Credit: Commonwealth of Australia, Department of Defence
+
+Picture 5: 
+event: Hunga Tonga–Hunga Ha'apai eruption and tsunami
+date: 2022-01-15
+approx_time: around 17:30 local time
+country: Tonga
+island: Tongatapu
+city_context: Nuku'alofa
+exact_location: unknown
+
+location_precision: island/city-level
+embedded_gps: no
+latitude: null
+longitude: null
+
+source_platform: Twitter/X
+source_account: @sakakimoana
+news_source: CNN
