@@ -12,3 +12,11 @@ source: Matangi Tonga
 
 Picture 2: 
 No useful information or geodata provided from news source
+
+Picture 3: 
+location_text: Nuku'alofa, Tonga
+location_source: article caption/context
+latitude: null
+longitude: null
+location_precision: city-level
+exact_location_verified: no
