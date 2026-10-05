@@ -1,0 +1,364 @@
+/content/CVDisaster/geolocalization
+
+Model: convnext_base.fb_in22k_ft_in1k_384
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+model.safetensors: downloading bytes:   3% 10.4M/354M [00:00<00:27, 12.7MB/s]
+model.safetensors: downloading bytes:  85% 300M/354M [00:02<00:00, 234MB/s, 25.1MB/s  ]
+model.safetensors: downloading bytes:  94% 332M/354M [00:02<00:00, 206MB/s, 28.6MB/s  ]
+model.safetensors: reconstructing file:  32% 115M/354M [00:02<00:03, 69.6MB/s,  513kB/s  ]
+model.safetensors: reconstructing file:  55% 196M/354M [00:02<00:01, 111MB/s, 14.5MB/s  ]
+model.safetensors: downloading bytes: 100% 336M/336M [00:06<00:00, 49.6MB/s, 29.7MB/s  ]
+model.safetensors: reconstructing file: 100% 354M/354M [00:06<00:00, 52.4MB/s, 25.5MB/s  ]
+{'input_size': (3, 384, 384), 'interpolation': 'bicubic', 'mean': (0.485, 0.456, 0.406), 'std': (0.229, 0.224, 0.225), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+Start from: weights_e40_98.6830.pth
+GPUs available: 1
+
+Image Size Sat: (384, 384)
+Image Size Ground: (140, 768)
+Mean: (0.485, 0.456, 0.406)
+Std:  (0.229, 0.224, 0.225)
+
+/content/CVDisaster/geolocalization/sample4geo/transforms.py:39: UserWarning: Argument(s) 'quality_lower, quality_upper' are not valid for transform ImageCompression
+  A.ImageCompression(quality_lower=90, quality_upper=100, p=0.5),
+/content/CVDisaster/geolocalization/sample4geo/transforms.py:41: UserWarning: Argument(s) 'always_apply' are not valid for transform ColorJitter
+  A.ColorJitter(brightness=0.15, contrast=0.15, saturation=0.15, hue=0.15, always_apply=False, p=0.5),
+/content/CVDisaster/geolocalization/sample4geo/transforms.py:48: UserWarning: Argument(s) 'max_holes, max_height, max_width, min_holes, min_height, min_width' are not valid for transform CoarseDropout
+  A.CoarseDropout(max_holes=25,
+/content/CVDisaster/geolocalization/sample4geo/transforms.py:63: UserWarning: Argument(s) 'quality_lower, quality_upper' are not valid for transform ImageCompression
+  A.ImageCompression(quality_lower=90, quality_upper=100, p=0.5),
+/content/CVDisaster/geolocalization/sample4geo/transforms.py:65: UserWarning: Argument(s) 'always_apply' are not valid for transform ColorJitter
+  A.ColorJitter(brightness=0.15, contrast=0.15, saturation=0.15, hue=0.15, always_apply=False, p=0.5),
+/content/CVDisaster/geolocalization/sample4geo/transforms.py:72: UserWarning: Argument(s) 'max_holes, max_height, max_width, min_holes, min_height, min_width' are not valid for transform CoarseDropout
+  A.CoarseDropout(max_holes=25,
+/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py:424: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  self.check_worker_number_rationality()
+/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py:424: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  self.check_worker_number_rationality()
+/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py:424: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  self.check_worker_number_rationality()
+Reference Images Test: 268
+Query Images Test: 268
+/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py:424: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  self.check_worker_number_rationality()
+/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py:424: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  self.check_worker_number_rationality()
+
+Reference Images Train: 3977
+Query Images Train: 3977
+/content/CVDisaster/geolocalization/1_train_cvdisaster.py:261: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler(init_scale=2.**10)
+
+Scheduler: cosine - max LR: 0.001
+Warmup Epochs: 1  - Warmup Steps: 498
+Train Epochs:  10 - Train Steps:  4980
+
+------------------------------[Zero Shot]------------------------------
+
+Extract Features:
+  0% 0/3 [00:00<?, ?it/s]/usr/local/lib/python3.13/dist-packages/torch/utils/data/dataloader.py:432: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  self.check_worker_number_rationality()
+/content/CVDisaster/geolocalization/sample4geo/trainer.py:134: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast():
+100% 3/3 [00:10<00:00,  3.41s/it]
+100% 3/3 [00:06<00:00,  2.15s/it]
+Compute Scores:
+100% 268/268 [00:00<00:00, 23401.13it/s]
+Recall@1: 35.8209 - Recall@5: 51.1194 - Recall@10: 60.8209 - Recall@top1: 41.4179
+
+Extract Features:
+100% 32/32 [00:58<00:00,  1.83s/it]
+100% 32/32 [01:06<00:00,  2.08s/it]
+Compute Scores Train:
+100% 3977/3977 [00:00<00:00, 27720.16it/s]
+Recall@1: 12.1700 - Recall@5: 18.7830 - Recall@10: 22.2530 - Recall@top1: 30.7267
+
+Shuffle Dataset:
+3978it [00:00, 13476.26it/s]
+idx_pool: 0
+Original Length: 3977 - Length after Shuffle: 3848
+Break Counter: 12
+Pairs left out of last batch to avoid creating noise: 129
+First Element ID: 1207473393508040 - Last Element ID: 1392271348209817
+
+------------------------------[Epoch: 1]------------------------------
+  0% 0/481 [00:00<?, ?it/s]/content/CVDisaster/geolocalization/sample4geo/trainer.py:32: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast():
+100% 481/481 [04:59<00:00,  1.61it/s, loss=0.8328, loss_avg=1.0815, lr=0.000966]
+Epoch: 1, Train Loss = 1.081, Lr = 0.000966
+
+------------------------------[Evaluate]------------------------------
+
+Extract Features:
+100% 3/3 [00:06<00:00,  2.03s/it]
+100% 3/3 [00:05<00:00,  1.90s/it]
+Compute Scores:
+100% 268/268 [00:00<00:00, 17177.69it/s]
+Recall@1: 35.0746 - Recall@5: 68.2836 - Recall@10: 79.8507 - Recall@top1: 50.7463
+
+Extract Features:
+100% 32/32 [00:55<00:00,  1.73s/it]
+100% 32/32 [00:59<00:00,  1.87s/it]
+Compute Scores Train:
+100% 3977/3977 [00:00<00:00, 25683.87it/s]
+Recall@1: 16.5703 - Recall@5: 42.0417 - Recall@10: 55.8210 - Recall@top1: 80.2364
+
+Shuffle Dataset:
+3978it [00:00, 19291.69it/s]
+idx_pool: 0
+Original Length: 3977 - Length after Shuffle: 3848
+Break Counter: 63
+Pairs left out of last batch to avoid creating noise: 129
+First Element ID: 752746483211098 - Last Element ID: 719464563111697
+
+------------------------------[Epoch: 2]------------------------------
+100% 481/481 [04:53<00:00,  1.64it/s, loss=0.8235, loss_avg=1.3125, lr=0.000974]
+Epoch: 2, Train Loss = 1.312, Lr = 0.000974
+
+------------------------------[Evaluate]------------------------------
+
+Extract Features:
+100% 3/3 [00:05<00:00,  1.83s/it]
+100% 3/3 [00:06<00:00,  2.23s/it]
+Compute Scores:
+100% 268/268 [00:00<00:00, 29615.17it/s]
+Recall@1: 20.1493 - Recall@5: 48.1343 - Recall@10: 59.7015 - Recall@top1: 28.3582
+
+Extract Features:
+100% 32/32 [00:55<00:00,  1.72s/it]
+100% 32/32 [00:58<00:00,  1.83s/it]
+Compute Scores Train:
+100% 3977/3977 [00:00<00:00, 27057.61it/s]
+Recall@1: 6.1604 - Recall@5: 20.6437 - Recall@10: 31.8582 - Recall@top1: 58.3606
+
+Shuffle Dataset:
+3978it [00:00, 16400.15it/s]
+idx_pool: 0
+Original Length: 3977 - Length after Shuffle: 3848
+Break Counter: 10
+Pairs left out of last batch to avoid creating noise: 129
+First Element ID: 2969981583148531 - Last Element ID: 559637952873519
+
+------------------------------[Epoch: 3]------------------------------
+100% 481/481 [04:53<00:00,  1.64it/s, loss=0.7337, loss_avg=1.1122, lr=0.000894]
+Epoch: 3, Train Loss = 1.112, Lr = 0.000894
+
+------------------------------[Evaluate]------------------------------
+
+Extract Features:
+100% 3/3 [00:05<00:00,  1.86s/it]
+100% 3/3 [00:05<00:00,  1.79s/it]
+Compute Scores:
+100% 268/268 [00:00<00:00, 21971.30it/s]
+Recall@1: 22.7612 - Recall@5: 59.3284 - Recall@10: 73.8806 - Recall@top1: 39.9254
+
+Extract Features:
+100% 32/32 [00:52<00:00,  1.63s/it]
+100% 32/32 [00:59<00:00,  1.85s/it]
+Compute Scores Train:
+100% 3977/3977 [00:00<00:00, 27337.64it/s]
+Recall@1: 15.4891 - Recall@5: 42.1172 - Recall@10: 55.8210 - Recall@top1: 82.2479
+
+Shuffle Dataset:
+3978it [00:00, 20092.68it/s]
+idx_pool: 0
+Original Length: 3977 - Length after Shuffle: 3848
+Break Counter: 58
+Pairs left out of last batch to avoid creating noise: 129
+First Element ID: 952762892673556 - Last Element ID: 1961634287505464
+
+------------------------------[Epoch: 4]------------------------------
+100% 481/481 [04:53<00:00,  1.64it/s, loss=0.6122, loss_avg=1.1448, lr=0.000770]
+Epoch: 4, Train Loss = 1.145, Lr = 0.000770
+
+------------------------------[Evaluate]------------------------------
+
+Extract Features:
+100% 3/3 [00:05<00:00,  1.87s/it]
+100% 3/3 [00:06<00:00,  2.13s/it]
+Compute Scores:
+100% 268/268 [00:00<00:00, 32188.12it/s]
+Recall@1: 33.2090 - Recall@5: 66.4179 - Recall@10: 80.5970 - Recall@top1: 46.2687
+
+Extract Features:
+100% 32/32 [00:53<00:00,  1.67s/it]
+100% 32/32 [01:00<00:00,  1.89s/it]
+Compute Scores Train:
+100% 3977/3977 [00:00<00:00, 17693.75it/s]
+Recall@1: 15.7908 - Recall@5: 41.0108 - Recall@10: 53.2562 - Recall@top1: 79.5323
+
+Shuffle Dataset:
+3978it [00:00, 20408.24it/s]
+idx_pool: 0
+Original Length: 3977 - Length after Shuffle: 3848
+Break Counter: 13
+Pairs left out of last batch to avoid creating noise: 129
+First Element ID: 922413868825698 - Last Element ID: 290125376737999
+
+------------------------------[Epoch: 5]------------------------------
+100% 481/481 [04:52<00:00,  1.64it/s, loss=0.5899, loss_avg=1.0058, lr=0.000616]
+Epoch: 5, Train Loss = 1.006, Lr = 0.000616
+
+------------------------------[Evaluate]------------------------------
+
+Extract Features:
+100% 3/3 [00:05<00:00,  1.86s/it]
+100% 3/3 [00:05<00:00,  1.81s/it]
+Compute Scores:
+100% 268/268 [00:00<00:00, 22102.20it/s]
+Recall@1: 33.9552 - Recall@5: 76.1194 - Recall@10: 87.3134 - Recall@top1: 48.8806
+
+Extract Features:
+100% 32/32 [00:54<00:00,  1.69s/it]
+100% 32/32 [00:59<00:00,  1.86s/it]
+Compute Scores Train:
+100% 3977/3977 [00:00<00:00, 26146.52it/s]
+Recall@1: 26.1252 - Recall@5: 57.2039 - Recall@10: 70.7066 - Recall@top1: 90.0679
+
+Shuffle Dataset:
+3978it [00:00, 20726.45it/s]
+idx_pool: 0
+Original Length: 3977 - Length after Shuffle: 3848
+Break Counter: 118
+Pairs left out of last batch to avoid creating noise: 129
+First Element ID: 6021685447960746 - Last Element ID: 494882939475395
+
+------------------------------[Epoch: 6]------------------------------
+100% 481/481 [04:54<00:00,  1.63it/s, loss=0.6767, loss_avg=0.9460, lr=0.000449]
+Epoch: 6, Train Loss = 0.946, Lr = 0.000449
+
+------------------------------[Evaluate]------------------------------
+
+Extract Features:
+100% 3/3 [00:07<00:00,  2.35s/it]
+100% 3/3 [00:05<00:00,  1.79s/it]
+Compute Scores:
+100% 268/268 [00:00<00:00, 30859.94it/s]
+Recall@1: 40.6716 - Recall@5: 74.6269 - Recall@10: 86.1940 - Recall@top1: 55.5970
+
+Extract Features:
+100% 32/32 [00:53<00:00,  1.69s/it]
+100% 32/32 [01:01<00:00,  1.94s/it]
+Compute Scores Train:
+100% 3977/3977 [00:00<00:00, 26302.86it/s]
+Recall@1: 34.5738 - Recall@5: 68.6950 - Recall@10: 80.6890 - Recall@top1: 94.7448
+
+Shuffle Dataset:
+3978it [00:00, 20832.66it/s]
+idx_pool: 0
+Original Length: 3977 - Length after Shuffle: 3848
+Break Counter: 41
+Pairs left out of last batch to avoid creating noise: 129
+First Element ID: 1039908580323783 - Last Element ID: 284783717363433
+
+------------------------------[Epoch: 7]------------------------------
+100% 481/481 [04:52<00:00,  1.64it/s, loss=0.6836, loss_avg=0.8384, lr=0.000287]
+Epoch: 7, Train Loss = 0.838, Lr = 0.000287
+
+------------------------------[Evaluate]------------------------------
+
+Extract Features:
+100% 3/3 [00:05<00:00,  1.89s/it]
+100% 3/3 [00:05<00:00,  1.72s/it]
+Compute Scores:
+100% 268/268 [00:00<00:00, 17751.42it/s]
+Recall@1: 50.7463 - Recall@5: 85.8209 - Recall@10: 92.1642 - Recall@top1: 67.5373
+
+Extract Features:
+100% 32/32 [00:54<00:00,  1.72s/it]
+100% 32/32 [00:58<00:00,  1.84s/it]
+Compute Scores Train:
+100% 3977/3977 [00:00<00:00, 24184.84it/s]
+Recall@1: 49.0319 - Recall@5: 82.1222 - Recall@10: 90.2942 - Recall@top1: 98.2147
+
+Shuffle Dataset:
+3978it [00:00, 21653.43it/s]
+idx_pool: 0
+Original Length: 3977 - Length after Shuffle: 3848
+Break Counter: 8
+Pairs left out of last batch to avoid creating noise: 129
+First Element ID: 1305181660373494 - Last Element ID: 847405320350616
+
+------------------------------[Epoch: 8]------------------------------
+100% 481/481 [04:53<00:00,  1.64it/s, loss=0.5257, loss_avg=0.7771, lr=0.000149]
+Epoch: 8, Train Loss = 0.777, Lr = 0.000149
+
+------------------------------[Evaluate]------------------------------
+
+Extract Features:
+100% 3/3 [00:05<00:00,  1.84s/it]
+100% 3/3 [00:06<00:00,  2.23s/it]
+Compute Scores:
+100% 268/268 [00:00<00:00, 28380.68it/s]
+Recall@1: 56.3433 - Recall@5: 88.0597 - Recall@10: 93.2836 - Recall@top1: 73.8806
+
+Extract Features:
+100% 32/32 [00:53<00:00,  1.67s/it]
+100% 32/32 [00:59<00:00,  1.87s/it]
+Compute Scores Train:
+100% 3977/3977 [00:00<00:00, 19434.18it/s]
+Recall@1: 57.5308 - Recall@5: 88.6095 - Recall@10: 93.7893 - Recall@top1: 98.7176
+
+Shuffle Dataset:
+3978it [00:00, 20730.19it/s]
+idx_pool: 0
+Original Length: 3977 - Length after Shuffle: 3848
+Break Counter: 6
+Pairs left out of last batch to avoid creating noise: 129
+First Element ID: 670912801433444 - Last Element ID: 145003234734523
+
+------------------------------[Epoch: 9]------------------------------
+100% 481/481 [04:52<00:00,  1.64it/s, loss=0.6091, loss_avg=0.7348, lr=0.000051]
+Epoch: 9, Train Loss = 0.735, Lr = 0.000051
+
+------------------------------[Evaluate]------------------------------
+
+Extract Features:
+100% 3/3 [00:05<00:00,  1.91s/it]
+100% 3/3 [00:05<00:00,  1.78s/it]
+Compute Scores:
+100% 268/268 [00:00<00:00, 29811.53it/s]
+Recall@1: 58.5821 - Recall@5: 89.1791 - Recall@10: 94.0299 - Recall@top1: 75.7463
+
+Extract Features:
+100% 32/32 [00:55<00:00,  1.73s/it]
+100% 32/32 [00:58<00:00,  1.84s/it]
+Compute Scores Train:
+100% 3977/3977 [00:00<00:00, 25023.13it/s]
+Recall@1: 64.7222 - Recall@5: 92.8086 - Recall@10: 96.2283 - Recall@top1: 99.3714
+
+Shuffle Dataset:
+3978it [00:00, 21341.40it/s]
+idx_pool: 0
+Original Length: 3977 - Length after Shuffle: 3848
+Break Counter: 61
+Pairs left out of last batch to avoid creating noise: 129
+First Element ID: 482929210479409 - Last Element ID: 1396503637753456
+
+------------------------------[Epoch: 10]------------------------------
+100% 481/481 [04:53<00:00,  1.64it/s, loss=0.6279, loss_avg=0.7072, lr=0.000004]
+Epoch: 10, Train Loss = 0.707, Lr = 0.000004
+
+------------------------------[Evaluate]------------------------------
+
+Extract Features:
+100% 3/3 [00:05<00:00,  1.84s/it]
+100% 3/3 [00:05<00:00,  1.80s/it]
+Compute Scores:
+100% 268/268 [00:00<00:00, 22142.69it/s]
+Recall@1: 62.3134 - Recall@5: 89.5522 - Recall@10: 94.4030 - Recall@top1: 76.1194
+
+Extract Features:
+100% 32/32 [00:54<00:00,  1.71s/it]
+100% 32/32 [00:56<00:00,  1.78s/it]
+Compute Scores Train:
+100% 3977/3977 [00:00<00:00, 26023.94it/s]
+Recall@1: 69.3488 - Recall@5: 94.1665 - Recall@10: 96.9575 - Recall@top1: 99.4971
+
+Shuffle Dataset:
+3978it [00:00, 12119.15it/s]
+idx_pool: 0
+Original Length: 3977 - Length after Shuffle: 3848
+Break Counter: 22
+Pairs left out of last batch to avoid creating noise: 129
+First Element ID: 1416408345431797 - Last Element ID: 648551256937661
