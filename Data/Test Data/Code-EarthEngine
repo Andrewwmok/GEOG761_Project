@@ -1,1 +1,37 @@
+var point = ee.Geometry.Point([174.74799, -36.67994]); // CHANGE coordinates
 
+var collection = ee.ImageCollection('COPERNICUS/S2_SR_HARMONIZED')
+  .filterBounds(point)
+  .filterDate('2026-09-01', '2026-09-15') // CHANGE around photo date
+  .filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE', 80));
+
+print('Number of images found:', collection.size());
+
+var image = collection
+  .sort('CLOUDY_PIXEL_PERCENTAGE')
+  .first();
+
+Map.setOptions('SATELLITE');
+Map.centerObject(point, 18);
+
+Map.addLayer(
+  image,
+  {
+    bands: ['B4', 'B3', 'B2'],
+    min: 0,
+    max: 3000
+  },
+  'Sentinel-2 RGB'
+);
+
+var pointFeature = ee.FeatureCollection([ee.Feature(point)]).style({
+  color: 'yellow',
+  pointSize: 8,
+  pointShape: 'circle',
+  width: 1,
+  fillColor: 'yellow'
+});
+
+Map.addLayer(pointFeature, {}, 'Photo location');
+
+## HAve to filter off Sentinel 2
